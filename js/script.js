@@ -1,5 +1,8 @@
 'use strict';
 
+//dichiaro le variabili
+let container = document.getElementById('container');
+
 //creo l'array contenente tutti i membri del team con le relative informazioni
 const teamMembers = [
     {'name': 'Wayne Barnett',
@@ -34,9 +37,17 @@ const teamMembers = [
 console.log(teamMembers)
 
 //creo un ciclo per visualizzare tutti gli oggetti dell'array e al suo interno un'altro ciclo per visulizzare tutte le proprità di ogni oggetto
-for (let i = 1; i <= teamMembers.length; i++) {
+for (let i = 0; i < teamMembers.length; i++) {
     let membroAttuale = teamMembers[i];
+    //creo una card dove inserire tutte le proprietà dell'oggetto come stringa
+    let cardMember = document.createElement('div');
     for (let key in membroAttuale) {
         console.log(membroAttuale[key]);
+        //aggiungo le proprietà dell'oggetto come stringa
+        cardMember.innerHTML += `<span>${membroAttuale[key]} - </span>`;
     }
+    console.log(cardMember);
+    container.append(cardMember);
+    console.log(container)
 }
+console.log(container);
