@@ -25,10 +25,6 @@ const teamMembers = [
     'role': 'Developer',
     'image': 'scott-estrada-developer.jpg'},
 
-    {'name': 'Wayne Barnett',
-    'role': 'Founder & CEO',
-    'image': 'wayne-barnett-founder-ceo.jpg'},
-
     {'name': 'Barbara Ramos',
     'role': 'Graphic Designer',
     'image': 'barbara-ramos-graphic-designer.jpg'}

@@ -34,20 +34,16 @@ console.log(teamMembers)
 
 //creo un ciclo per visualizzare tutti gli oggetti dell'array e al suo interno un'altro ciclo per visulizzare tutte le proprità di ogni oggetto
 for (let i = 0; i < teamMembers.length; i++) {
+    
     let membroAttuale = teamMembers[i];
-    //creo una card dove inserire tutte le proprietà dell'oggetto come stringa
-    let cardMember = document.createElement('div');
-    for (let key in membroAttuale) {
-        console.log(membroAttuale[key]);
-        //aggiungo le proprietà dell'oggetto come stringa o come immagine a seconda del contenuto
-        if (membroAttuale[key].includes('.jpg')) {
-            cardMember.innerHTML += `<img src="./img/${membroAttuale[key]}"</img>`
-        } else {
-        cardMember.innerHTML += `<span>${membroAttuale[key]} - </span>`;
-        }
-    }
-    console.log(cardMember);
-    container.append(cardMember);
-    console.log(container)
+
+    //Creo l'elemento del DOM che rappresenterà la card di ogni membro
+    let card = `<div class="card col-3 m-1 my-3">
+        <h5 class="text-center mt-3">${membroAttuale.name}</h5>
+        <p class="text-center">${membroAttuale.role}</p> 
+        <img src='./img/${membroAttuale.image}'></img>
+    </div>`;
+
+    //concateno la nuova card relativa al singolo membro al contenitore con le altre
+    container.innerHTML += card;
 }
-console.log(container);
