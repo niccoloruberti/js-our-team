@@ -32,3 +32,11 @@ const teamMembers = [
 ]
 
 console.log(teamMembers)
+
+//creo un ciclo per visualizzare tutti gli oggetti dell'array e al suo interno un'altro ciclo per visulizzare tutte le proprità di ogni oggetto
+for (let i = 1; i <= teamMembers.length; i++) {
+    let membroAttuale = teamMembers[i];
+    for (let key in membroAttuale) {
+        console.log(membroAttuale[key]);
+    }
+}
